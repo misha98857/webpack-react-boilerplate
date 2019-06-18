@@ -19,9 +19,11 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true,
-              camelCase: true,
-              localIdentName: '[local]___[hash:base64:5]',
+              localsConvention: 'camelCase',
+              modules: {
+                mode: 'local',
+                localIdentName: '[local]___[hash:base64:5]',
+              },
             },
           },
           'sass-loader',
